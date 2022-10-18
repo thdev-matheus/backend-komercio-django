@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+  pydb:
+    container_name: pydb
+    image: postgres:latest
+    ports:
+      - 5050:5432
+    environment:
+      - POSTGRES_HOST=pydb
+      - POSTGRES_USER=theus
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=komercio
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U theus -d komercio"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    volumes:
+      - komercio:/var/lib/postgresql/data:rw
+
+volumes:
+  komercio:
+    external: true
+
+  # pymigrate:
+  #   tty: true
+  #   container_name: pymigrate
+  #   command: "python manage.py migrate"
+  #   image: python:3.10.7
+  #   build: .
+  #   ports:
+  #     - 8004:8004
+  #   depends_on:
+  #     pydb:
+  #       condition: service_healthy
+  
+  # pyapi:
+  #   tty: true
+  #   container_name: pyapi
+  #   command: "python manage.py runserver"
+  #   image: python:3.10.7
+  #   build: .
+  #   ports:
+  #     - 8005:8000
+  #   depends_on:
+  #     pydb:
+  #       condition: service_healthy
+    
