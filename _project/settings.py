@@ -46,6 +46,7 @@ THIRD_PART_APPS = [
 
 MY_APPS = [
     "accounts",
+    "products",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PART_APPS + MY_APPS
@@ -84,14 +85,14 @@ WSGI_APPLICATION = "_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-""" DATABASES = {
+DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
-} """
+}
 
-DATABASES = {
+""" DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "komercio",
@@ -101,7 +102,7 @@ DATABASES = {
         "PORT": "5050",
     }
 }
-
+ """
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
