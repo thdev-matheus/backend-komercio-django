@@ -1,8 +1,10 @@
-import ipdb
 from rest_framework import generics, views
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.permissions import IsAdminUser
 
 from .models import Account
+from .permissions import OwnerPermission
 from .serializers import AccountSerializer
 
 
@@ -19,6 +21,32 @@ class AccountNewestView(generics.ListAPIView):
         account_quantity = self.kwargs["num"]
 
         return self.queryset.order_by("-date_joined")[0:account_quantity]
+
+
+class AccountDetailUpdateView(generics.UpdateAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [OwnerPermission]
+
+    queryset = Account.objects.all()
+    serializer_class = AccountSerializer
+    lookup_url_kwarg = "user_id"
+
+
+class ActivateDeactivateAccountView(generics.UpdateAPIView, generics.GenericAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAdminUser]
+
+    queryset = Account.objects.all()
+    serializer_class = AccountSerializer
+    lookup_url_kwarg = "user_id"
+
+    def partial_update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.is_active = not instance.is_active
+        instance.save()
+        serializer = self.get_serializer(instance)
+
+        return views.Response(serializer.data)
 
 
 class LoginView(ObtainAuthToken):
