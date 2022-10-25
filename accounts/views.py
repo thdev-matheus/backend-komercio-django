@@ -60,7 +60,7 @@ class ActivateDeactivateAccountView(generics.UpdateAPIView, generics.GenericAPIV
 
 class LoginView(ObtainAuthToken):
     def post(self, request: views.Request, *args, **kwargs) -> views.Response:
-        # se eu quisesse retornar só o token eu usaria as linhas 12 e 13 mas como eu tbm quero enviar na resposta o usuário...
+        # se eu quisesse retornar só o token eu usaria as linhas 65 e 66 mas como eu tbm quero enviar na resposta o usuário...
         # pega o token
         response = super().post(request, *args, **kwargs)
         token = response.data["token"]
