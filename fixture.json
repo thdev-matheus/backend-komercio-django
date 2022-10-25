@@ -1,0 +1,528 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 6,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 6,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 6,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 6,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add token",
+    "content_type": 7,
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change token",
+    "content_type": 7,
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete token",
+    "content_type": 7,
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view token",
+    "content_type": 7,
+    "codename": "view_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 8,
+    "codename": "add_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 8,
+    "codename": "change_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 8,
+    "codename": "delete_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 8,
+    "codename": "view_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 9,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 9,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 9,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 9,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "accounts",
+    "model": "account"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "products",
+    "model": "product"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "08b314d956b712716d3610a2692442152c594eca",
+  "fields": {
+    "user": "7710a015-1c01-4983-8e22-a48177e5ff15",
+    "created": "2022-10-23T02:54:08.150Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "17c67183c03b13f4914f4458fa6204453d1af289",
+  "fields": {
+    "user": "a8fe77c4-be9c-4498-b645-ac9ad47502d5",
+    "created": "2022-10-23T02:54:37.332Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "6e415b19d8df88d55c55e5ae82296337e41a20b1",
+  "fields": {
+    "user": "2259a006-1d8f-4851-a9c7-f990acdcd918",
+    "created": "2022-10-23T02:53:36.604Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "bb851d07d416eae4036bef15e1ad70e781634a66",
+  "fields": {
+    "user": "a340a891-e33a-4c8f-b3a2-f9391232dbc8",
+    "created": "2022-10-23T02:54:59.875Z"
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": "2259a006-1d8f-4851-a9c7-f990acdcd918",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$vfrNyy3Ih8hCEnWPdaGQma$kpE5F+iNs9VJShaZLc0Hxgyv4oBzy05Mmi7q7CLbr1I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "chan",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-23T02:51:40.877Z",
+    "first_name": "chrystian",
+    "last_name": "rodolfo",
+    "is_seller": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": "7710a015-1c01-4983-8e22-a48177e5ff15",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ciNbpyFAggkI8FUAQqEiJq$yOfZPpLJ6DZTig++3MvqnECnsR4517qqIxN/pBfcjaE=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "theus",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-23T02:49:49.912Z",
+    "first_name": "Matheus",
+    "last_name": "Vieira",
+    "is_seller": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": "a340a891-e33a-4c8f-b3a2-f9391232dbc8",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$pgDZlgmNqZcRMDVVowjO8f$AHR+jKAMBpWFO5h2NiDfCaS8Q7jmftWaMMj6hxXddbo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jess",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-23T02:54:48.672Z",
+    "first_name": "Jessica Patched",
+    "last_name": "Vieira",
+    "is_seller": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": "a8fe77c4-be9c-4498-b645-ac9ad47502d5",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$h7uVUcQridwQHErVV6hpbw$4XNG3YhYWXs6NYevB6l+L2chpexScE47+1OhlwTgYZw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ale",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-23T02:51:36.281Z",
+    "first_name": "Alexandre",
+    "last_name": "Kenzie",
+    "is_seller": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": "4205766c-1819-4987-b4c5-36061cbad611",
+  "fields": {
+    "description": "teste1",
+    "price": "100.99",
+    "quantity": 15,
+    "is_active": true,
+    "seller": "2259a006-1d8f-4851-a9c7-f990acdcd918"
+  }
+},
+{
+  "model": "products.product",
+  "pk": "55d8b314-b81c-431b-a4ec-4191b24c6c00",
+  "fields": {
+    "description": "teste2",
+    "price": "100.99",
+    "quantity": 15,
+    "is_active": true,
+    "seller": "2259a006-1d8f-4851-a9c7-f990acdcd918"
+  }
+}
+]
