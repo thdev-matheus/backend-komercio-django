@@ -4,7 +4,6 @@ omit =
     venv/*
     _project/*
     manage.py
-    docs/*
 
 [report]
 show_missing = True

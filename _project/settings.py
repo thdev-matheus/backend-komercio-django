@@ -54,7 +54,6 @@ THIRD_PART_APPS = [
 MY_APPS = [
     "accounts",
     "products",
-    "docs",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PART_APPS + MY_APPS
