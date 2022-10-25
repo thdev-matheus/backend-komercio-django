@@ -55,37 +55,6 @@ paths:
                 $ref: '#/components/schemas/Account'
           description: ''
   /api/accounts/{user_id}/:
-    put:
-      operationId: accounts_update
-      parameters:
-      - in: path
-        name: user_id
-        schema:
-          type: string
-        required: true
-      tags:
-      - accounts
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Account'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/Account'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/Account'
-        required: true
-      security:
-      - tokenAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Account'
-          description: ''
     patch:
       operationId: accounts_partial_update
       parameters:
@@ -117,37 +86,6 @@ paths:
                 $ref: '#/components/schemas/Account'
           description: ''
   /api/accounts/{user_id}/management/:
-    put:
-      operationId: accounts_management_update
-      parameters:
-      - in: path
-        name: user_id
-        schema:
-          type: string
-        required: true
-      tags:
-      - accounts
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Account'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/Account'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/Account'
-        required: true
-      security:
-      - tokenAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Account'
-          description: ''
     patch:
       operationId: accounts_management_partial_update
       parameters:
@@ -290,37 +228,6 @@ paths:
         required: true
       tags:
       - products
-      security:
-      - tokenAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProductDetail'
-          description: ''
-    put:
-      operationId: products_update
-      parameters:
-      - in: path
-        name: product_id
-        schema:
-          type: string
-        required: true
-      tags:
-      - products
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ProductDetail'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/ProductDetail'
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/ProductDetail'
-        required: true
       security:
       - tokenAuth: []
       responses:
