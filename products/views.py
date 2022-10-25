@@ -1,6 +1,6 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from utils.mixins import ProductSerializerByMethodMixin
 
 from .models import Product
@@ -22,13 +22,13 @@ class ProductView(ProductSerializerByMethodMixin, generics.ListCreateAPIView):
         serializer.save(seller=self.request.user)
 
 
-class ProductDetailView(ProductSerializerByMethodMixin, generics.RetrieveUpdateAPIView):
+class ProductDetailView(generics.RetrieveUpdateAPIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [OwnerOrReadyOnlyPermission]
     queryset = Product.objects.all()
     lookup_url_kwarg = "product_id"
+    serializer_class = ProductDetailSerializer
 
-    serializer_map = {
-        "GET": ProductDetailSerializer,
-        "PATCH": ProductDetailSerializer,
-    }
+    @extend_schema(exclude=True)
+    def put(self, request, *args, **kwargs):
+        return super().put(request, *args, **kwargs)

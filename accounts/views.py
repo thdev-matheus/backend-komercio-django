@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics, views
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.views import ObtainAuthToken
@@ -31,6 +32,10 @@ class AccountDetailUpdateView(generics.UpdateAPIView):
     serializer_class = AccountSerializer
     lookup_url_kwarg = "user_id"
 
+    @extend_schema(exclude=True)
+    def put(self, request, *args, **kwargs):
+        return super().put(request, *args, **kwargs)
+
 
 class ActivateDeactivateAccountView(generics.UpdateAPIView, generics.GenericAPIView):
     authentication_classes = [TokenAuthentication]
@@ -47,6 +52,10 @@ class ActivateDeactivateAccountView(generics.UpdateAPIView, generics.GenericAPIV
         serializer = self.get_serializer(instance)
 
         return views.Response(serializer.data)
+
+    @extend_schema(exclude=True)
+    def put(self, request, *args, **kwargs):
+        return super().put(request, *args, **kwargs)
 
 
 class LoginView(ObtainAuthToken):
