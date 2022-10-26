@@ -1,6 +1,7 @@
 import ipdb
 from accounts.models import Account
 from django.urls import reverse
+from products.models import Product
 from rest_framework.test import APITestCase
 
 from . import mocks
@@ -77,3 +78,50 @@ class ProductCreateTest(APITestCase):
         self.assertIn("description", response.data)
         self.assertIn("price", response.data)
         self.assertIn("quantity", response.data)
+
+
+class ProductReadFilterViewTest(APITestCase):
+    @classmethod
+    def setUpTestData(cls) -> None:
+        seller = Account.objects.create_user(**mocks.USER_SELLER1_DATA)
+        [
+            Product.objects.create(**mocks.SELLER1_PRODUCT, seller=seller)
+            for _ in range(10)
+        ]
+
+    def test_list_all_products(self):
+        response = self.client.get("/api/products/")
+        expected_keys = {
+            "count",
+            "next",
+            "previous",
+            "results",
+        }
+        response_keys = set(response.data.keys())
+
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(2, len(response.data["results"]))
+        self.assertSetEqual(expected_keys, response_keys)
+
+    def test_filter_product_by_id(self):
+        product = Product.objects.first()
+        response = self.client.get(f"/api/products/{product.id}/")
+        expected_keys = {
+            "id",
+            "seller",
+            "description",
+            "price",
+            "quantity",
+            "is_active",
+        }
+        response_keys = set(response.data.keys())
+
+        self.assertEqual(200, response.status_code)
+        self.assertSetEqual(expected_keys, response_keys)
+
+    def test_filter_product_that_does_not_exist(self):
+        response = self.client.get(f"/api/products/produtoquenaoexiste/")
+
+        self.assertEqual(404, response.status_code)
+        self.assertIn("detail", response.data)
+        self.assertEqual("not_found", response.data["detail"].code)

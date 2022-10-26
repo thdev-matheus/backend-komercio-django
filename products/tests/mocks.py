@@ -60,3 +60,7 @@ SELLER1_PRODUCT_NEGATIVE_QUANTITY = {
     "price": 5.99,
     "quantity": -10,
 }
+
+SELLER_PRODUCT_UPDATE = {
+    "description": "Produto Atualizado",
+}
