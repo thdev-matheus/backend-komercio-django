@@ -32,7 +32,7 @@
 há um docker-compose.yml configurado para executar um banco de dados do postgres em um container para facilitar a correção e o desenvolvimento. Caso deseje usá-lo basta digitar no terminal:
 
 ```shell
-$ docke-compose up -d
+$ docker-compose up -d
 ```
 
 <br/>
