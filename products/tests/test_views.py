@@ -26,6 +26,13 @@ class ProductCreateTest(APITestCase):
 
         self.token_common = response_login_common.data["token"]
 
+    def test_creation_of_product_without_token(self):
+        response = self.client.post("/api/products/", mocks.SELLER1_PRODUCT)
+
+        self.assertEqual(401, response.status_code)
+        self.assertIn("detail", response.data)
+        self.assertEqual("not_authenticated", response.data["detail"].code)
+
     def test_creation_of_product_with_a_non_seller_token(self):
         self.client.credentials(HTTP_AUTHORIZATION=f"Token {self.token_common}")
         response = self.client.post("/api/products/", mocks.SELLER1_PRODUCT)
