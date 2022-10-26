@@ -94,4 +94,31 @@ class AccountReadViewTest(APITestCase):
 
 
 class AccountLoginViewTest(APITestCase):
-    ...
+    def setUp(self) -> None:
+        self.client.post("/api/accounts/", mocks.USER_SELLER1_DATA)
+        self.client.post("/api/accounts/", mocks.USER_SELLER2_DATA)
+        self.client.post("/api/accounts/", mocks.USER_COMMON_DATA)
+
+    def test_login_with_correct_data(self):
+        response = self.client.post("/api/login/", mocks.USER_SELLER1_LOGIN_DATA)
+
+        self.assertEqual(200, response.status_code)
+        self.assertIn("token", response.data)
+        self.assertIn("user", response.data)
+        self.assertNotIn("password", response.data["user"])
+
+    def test_login_with_incorrect_data(self):
+        response = self.client.post(
+            "/api/login/", mocks.USER_SELLER1_LOGIN_INCORRECT_DATA
+        )
+
+        self.assertEqual(400, response.status_code)
+        self.assertNotIn("token", response.data)
+
+    def test_login_without_data(self):
+        response = self.client.post("/api/login/", {})
+
+        self.assertEqual(400, response.status_code)
+        self.assertNotIn("token", response.data)
+        self.assertIn("username", response.data)
+        self.assertIn("password", response.data)

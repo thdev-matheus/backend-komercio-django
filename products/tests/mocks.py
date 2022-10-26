@@ -1,11 +1,3 @@
-SUPERUSER_DATA = {
-    "password": "1234",
-    "username": "theus",
-    "first_name": "Matheus",
-    "last_name": "Vieira",
-    "is_seller": False,
-}
-
 USER_SELLER1_DATA = {
     "password": "abcd",
     "username": "chan",
@@ -30,20 +22,6 @@ USER_COMMON_DATA = {
     "is_seller": False,
 }
 
-USER_INCORRECT_DATA = {
-    "password": "abcd",
-    "username": "chan",
-    "first_name": "chrystian",
-    "last_name": "rodolfo",
-    "is_seller": 25,
-}
-
-
-SUPERUSER_LOGIN_DATA = {
-    "password": "1234",
-    "username": "theus",
-}
-
 USER_SELLER1_LOGIN_DATA = {
     "password": "abcd",
     "username": "chan",
@@ -59,16 +37,26 @@ USER_COMMON_LOGIN_DATA = {
     "username": "jess",
 }
 
-USER_SELLER1_LOGIN_INCORRECT_DATA = {
-    "password": "dcba1234",
-    "username": "jess",
+SELLER1_PRODUCT = {
+    "description": "produto 1",
+    "price": 5.99,
+    "quantity": 10,
 }
 
-USER_COMMON_UPDATE_DATA = {
-    "first_name": "Jessica Patched",
+SELLER2_PRODUCT = {
+    "description": "produto 2",
+    "price": 2.99,
+    "quantity": 20,
 }
 
-USER_COMMON_UPDATE_INCORRECT_DATA = {
-    "first_name": "Jessica Patched",
-    "is_active": False,
+SELLER1_PRODUCT_INCORRECT = {
+    "description": False,
+    "price": 5.99,
+    "quantity": 2.5,
+}
+
+SELLER1_PRODUCT_NEGATIVE_QUANTITY = {
+    "description": "produto 1",
+    "price": 5.99,
+    "quantity": -10,
 }
